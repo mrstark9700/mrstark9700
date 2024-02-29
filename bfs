@@ -1,0 +1,22 @@
+tree={
+'5':['3','7'],
+'3':['2','4'],
+'7':['8'],
+'2':[],
+'4':[],
+'8':[]
+}
+visites=[]
+queue=[]
+def bfs(visited,tree,node):
+visited.append(node)
+queue.append(node)
+while queue:
+m=queue.pop(0)
+for child in tree [m]:
+if child not visited:
+visited.append(child)
+queue.append(child)
+print("following is the Breadth-First Search traversal of the above tree")
+bfs(visited,tree,'5')
+print(visited)
